@@ -1,0 +1,26 @@
+FE
+Node.js + Tailwind css + Typescript
+Node.js 설치 : https://nodejs.org/ko/download
+
+BE
+Python 3.12 + Fast API
+Python 3.12 설치 링크 (선택) : https://www.python.org/downloads/release/python-31212/
+uv 를 쓰시면 쉽게 설치하실 수 있습니다 :slightly_smiling_face:
+uv
+Set-ExecutionPolicy RemoteSigned
+이후
+ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+DB
+SQLite + SQLAlchemy (설치할 필요 없음)
+
+
+포팅 매뉴얼
+FE
+cd frontend
+npm install
+npm run dev
+BE
+uv venv --python 3.12
+.\.venv\Scripts\activate
+uv pip install -r requirements.txt
+uvicorn app.main:app --reload
